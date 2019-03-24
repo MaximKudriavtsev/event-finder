@@ -19,7 +19,9 @@
     "react-router-redux": "^4.0.8",
     "redux": "^4.0.1",
     "react-redux": "^6.0.1",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "jsonwebtoken": "^8.5.1",
+    "jsrsasign": "^8.0.12"
   },
   "browserslist": [
     ">0.2%",
