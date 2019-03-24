@@ -7,7 +7,7 @@ export default class Auth extends React.PureComponent {
       <div>
         Auth
         <br />
-          <a href={`https://${APP_URL}/login?response_type=code&client_id=${CLIENT_ID}&redirect_uri=https://www.example.com`}>
+          <a href={`https://${APP_URL}/login?response_type=code&client_id=${CLIENT_ID}&redirect_uri=http://localhost:3000`}>
           <button>
             Sign In
           </button>
