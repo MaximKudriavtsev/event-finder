@@ -1,22 +1,24 @@
 import * as React from 'react';
-import jwt from 'jsonwebtoken';
-import KJUR from 'jsrsasign';
+import checkCookie from '../utils/check-cookie';
+import Auth from './auth';
 
 export default class Home extends React.PureComponent {
   render() {
+    const userData = checkCookie('userData');
 
-    let jwt = '';
-    if (this.props.location.hash) {
-      jwt = this.props.location.hash.slice(10);
-    }
+    console.log(userData);
 
-    var headerObj = KJUR.jws.JWS.readSafeJSONString(KJUR.b64utoutf8(KJUR.sJWT.split(".")[0]));
-    var payloadObj = KJUR.jws.JWS.readSafeJSONString(KJUR.b64utoutf8(KJUR.sJWT.split(".")[1]));
-
-    debugger
     return (
       <div>
         Home
+        {userData ? (
+          `Hello ${userData.name} | ${userData.email}`
+        ) : (
+          <React.Fragment>
+            Please authorize!
+            <Auth />
+          </React.Fragment>
+        )}
       </div>
     );
   }
