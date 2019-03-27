@@ -5,6 +5,7 @@ import Home from '../components/home';
 import About from '../components/about';
 import Auth from '../components/auth';
 import LogIn from '../components/log-in';
+import Main from '../components/main';
 
 class App extends React.Component {
   render() {
@@ -14,6 +15,7 @@ class App extends React.Component {
         <Route path="/about/" component={About} />
         <Route path="/auth/" component={Auth} />
         <Route path="/log-in/" component={LogIn} />
+        <Route path="/main/" component={Main} />
       </Router>
     );
   }
